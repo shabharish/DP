@@ -36,33 +36,33 @@
              <!-- Transform the RIHX request as expected to be placed in Wait-out Queue -->   
              <xsl:variable name="rihxWaitOutReq">
                  <RIHXRequest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="RIHXRequest_._type">                     
-                     <PCRID><xsl:value-of select="//*[local-name()='PCRID']/text()"/></PCRID>
-                     <iHealth><xsl:value-of select="//*[local-name()='iHealth']/text()"/></iHealth>
-                     <sMetaData><xsl:value-of select="//*[local-name()='MetaData']/text()"/></sMetaData>
-                     <ClientSearch>
-                         <FirstName><xsl:value-of select="//*[local-name()='FirstName']/text()"/></FirstName>
-                         <LastName><xsl:value-of select="//*[local-name()='LastName']/text()"/></LastName>
-                         <BirthDate><xsl:value-of select="//*[local-name()='BirthDate']/text()"/></BirthDate>
-                         <Gender><xsl:value-of select="//*[local-name()='Gender']/text()"/></Gender>                         
-                     </ClientSearch>
-                     <PolicySearch>
-                         <PolicyCount><xsl:value-of select="//*[local-name()='PolicyCount']/text()"/></PolicyCount>
-                         <InsuranceHistory>
-                             <Policy><xsl:value-of select="//*[local-name()='Policy']/text()"/></Policy>
-                             <StatutoryCompany><xsl:value-of select="//*[local-name()='StatutoryCompany']/text()"/></StatutoryCompany>
-                             <SystemAdminCode><xsl:value-of select="//*[local-name()='SystemAdminCode']/text()"/></SystemAdminCode>            
-                         </InsuranceHistory>
-                     </PolicySearch>
-                     <TreatySearch>
-                         <BasePlanCode><xsl:value-of select="//*[local-name()='BasePlanCode']/text()"/></BasePlanCode>
-                         <PolicyAge><xsl:value-of select="//*[local-name()='PolicyAge']/text()"/></PolicyAge>
-                         <TreatyCompany><xsl:value-of select="//*[local-name()='TreatyCompany']/text()"/></TreatyCompany>
-                         <SystemAdminCode><xsl:value-of select="//*[local-name()='SystemAdminCode']/text()"/></SystemAdminCode>
-                         <Rider>
-                             <RiderPlanCode><xsl:value-of select="//*[local-name()='RiderPlanCode'][1]/*[local-name()='RiderPlanCode']"/></RiderPlanCode>                             
-                         </Rider>
-                     </TreatySearch>
-                 </RIHXRequest>
+                     <PCRID><xsl:value-of select="/RIHXRequest_RIHXRequest/RIHXRequest_RIHXRequest[1]/*[local-name()='ROOT'][1]/*[local-name()='PCRID'][1]"/></PCRID>
+                        <iHealth><xsl:value-of select="/RIHXRequest_RIHXRequest/RIHXRequest_RIHXRequest[1]/*[local-name()='ROOT'][1]/*[local-name()='iHealth'][1]"/></iHealth>
+                        <sMetaData><xsl:value-of select="/RIHXRequest_RIHXRequest/RIHXRequest_RIHXRequest[1]/*[local-name()='ROOT'][1]/*[local-name()='MetaData'][1]"/></sMetaData>
+                        <ClientSearch>
+                            <FirstName><xsl:value-of select="/RIHXRequest_RIHXRequest/RIHXRequest_RIHXRequest[1]/*[local-name()='ROOT'][1]/*[local-name()='ClientSearch'][1]/*[local-name()='FirstName'][1]"/></FirstName>
+                            <LastName><xsl:value-of select="/RIHXRequest_RIHXRequest/RIHXRequest_RIHXRequest[1]/*[local-name()='ROOT'][1]/*[local-name()='ClientSearch'][1]/*[local-name()='LastName'][1]"/></LastName>
+                            <BirthDate><xsl:value-of select="/RIHXRequest_RIHXRequest/RIHXRequest_RIHXRequest[1]/*[local-name()='ROOT'][1]/*[local-name()='ClientSearch'][1]/*[local-name()='BirthDate'][1]"/></BirthDate>
+                            <Gender><xsl:value-of select="/RIHXRequest_RIHXRequest/RIHXRequest_RIHXRequest[1]/*[local-name()='ROOT'][1]/*[local-name()='ClientSearch'][1]/*[local-name()='Gender'][1]"/></Gender>                         
+                        </ClientSearch>
+                        <PolicySearch>
+                            <PolicyCount><xsl:value-of select="/RIHXRequest_RIHXRequest/RIHXRequest_RIHXRequest[1]/*[local-name()='ROOT'][1]/*[local-name()='PolicySearch'][1]/*[local-name()='PolicyCount'][1]"/></PolicyCount>
+                            <InsuranceHistory>
+                                <Policy><xsl:value-of select="/RIHXRequest_RIHXRequest/RIHXRequest_RIHXRequest[1]/*[local-name()='ROOT'][1]/*[local-name()='PolicySearch'][1]/*[local-name()='InsuranceHistory'][1]/*[local-name()='Policy'][1]"/></Policy>
+                                <StatutoryCompany><xsl:value-of select="/RIHXRequest_RIHXRequest/RIHXRequest_RIHXRequest[1]/*[local-name()='ROOT'][1]/*[local-name()='PolicySearch'][1]/*[local-name()='InsuranceHistory'][1]/*[local-name()='StatutoryCompany'][1]"/></StatutoryCompany>
+                                <SystemAdminCode><xsl:value-of select="/RIHXRequest_RIHXRequest/RIHXRequest_RIHXRequest[1]/*[local-name()='ROOT'][1]/*[local-name()='PolicySearch'][1]/*[local-name()='InsuranceHistory'][1]/*[local-name()='SystemAdminCode'][1]"/></SystemAdminCode>            
+                            </InsuranceHistory>
+                        </PolicySearch>
+                        <TreatySearch>
+                            <BasePlanCode><xsl:value-of select="/RIHXRequest_RIHXRequest/RIHXRequest_RIHXRequest[1]/*[local-name()='ROOT'][1]/*[local-name()='TreatySearch'][1]/*[local-name()='BasePlanCode'][1]"/></BasePlanCode>
+                            <PolicyAge><xsl:value-of select="/RIHXRequest_RIHXRequest/RIHXRequest_RIHXRequest[1]/*[local-name()='ROOT'][1]/*[local-name()='TreatySearch'][1]/*[local-name()='PolicyAge'][1]"/></PolicyAge>
+                            <TreatyCompany><xsl:value-of select="/RIHXRequest_RIHXRequest/RIHXRequest_RIHXRequest[1]/*[local-name()='ROOT'][1]/*[local-name()='TreatySearch'][1]/*[local-name()='TreatyCompany'][1]"/></TreatyCompany>
+                            <SystemAdminCode><xsl:value-of select="/RIHXRequest_RIHXRequest/RIHXRequest_RIHXRequest[1]/*[local-name()='ROOT'][1]/*[local-name()='TreatySearch'][1]/*[local-name()='SystemAdminCode'][1]"/></SystemAdminCode>
+                            <Rider>
+                                <RiderPlanCode><xsl:value-of select="/RIHXRequest_RIHXRequest/RIHXRequest_RIHXRequest[1]/*[local-name()='ROOT'][1]/*[local-name()='TreatySearch'][1]/*[local-name()='Rider'][1]/*[local-name()='RiderPlanCode'][1]/*[local-name()='RiderPlanCode'][1]"/></RiderPlanCode>                             
+                            </Rider>
+                        </TreatySearch>
+                    </RIHXRequest>
              </xsl:variable>
                 <!-- <xsl:copy-of select="$rihxWaitOutReq"/> -->
                 <!-- Invoke URL Open to place the data to Wait Queue -->
